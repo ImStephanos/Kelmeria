@@ -1,70 +1,332 @@
-body {
-    margin: 0;
-    font-family: Georgia, serif;
-    background-color: #111;
-    color: #e8d8b0;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-header {
-    text-align: center;
-    padding: 50px 20px;
-    background: #1b130d;
-    border-bottom: 2px solid #8b6b35;
+html{
+    scroll-behavior:smooth;
 }
 
-header h1 {
-    font-size: 60px;
-    margin: 0;
-    letter-spacing: 5px;
+body{
+
+    background:#0d0d10;
+    color:#f4ecd8;
+
+    font-family:Inter,sans-serif;
+
 }
 
-header p {
-    font-size: 20px;
-    color: #c9b27c;
+/* ---------- NAV ---------- */
+
+header{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    z-index:999;
+
+    background:rgba(12,12,14,.92);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid #2c2418;
+
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-    background: #24180f;
+nav{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 40px;
+
 }
 
-nav a {
-    color: #e8d8b0;
-    text-decoration: none;
-    font-size: 18px;
+.logo{
+
+    font-family:Cinzel,serif;
+
+    font-size:28px;
+
+    color:#cba45f;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
 }
 
-nav a:hover {
-    color: white;
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+
 }
 
-main {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
+.nav-links a{
+
+    color:#ddd;
+
+    text-decoration:none;
+
+    transition:.3s;
+
 }
 
-section {
-    margin-bottom: 40px;
+.nav-links a:hover{
+
+    color:#cba45f;
+
 }
 
-h2 {
-    border-bottom: 1px solid #8b6b35;
-    padding-bottom: 10px;
+/* ---------- HERO ---------- */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+    background:
+    linear-gradient(rgba(10,10,10,.65),rgba(10,10,10,.85)),
+    url("https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1800&auto=format&fit=crop");
+
+    background-size:cover;
+
+    background-position:center;
+
 }
 
-.card {
-    background: #1b130d;
-    padding: 25px;
-    border-radius: 10px;
-    border: 1px solid #8b6b35;
+.hero-content{
+
+    max-width:850px;
+
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #0a0705;
+.hero h1{
+
+    font-family:Cinzel,serif;
+
+    font-size:90px;
+
+    color:#d7b06c;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    color:#ddd;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    padding:18px 40px;
+
+    border:2px solid #cba45f;
+
+    color:#f7f2e8;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:#cba45f;
+
+    color:#111;
+
+}
+
+/* ---------- MAP ---------- */
+
+.map-section{
+
+    padding:120px 40px;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+.map-section h2{
+
+    font-family:Cinzel;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+    color:#cba45f;
+
+}
+
+.map-placeholder{
+
+    height:500px;
+
+    border:2px dashed #6d5a34;
+
+    border-radius:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#151519;
+
+}
+
+.map-placeholder h3{
+
+    font-family:Cinzel;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+}
+
+/* ---------- REGIONS ---------- */
+
+.regions{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:0 40px 120px;
+
+}
+
+.regions h2{
+
+    font-family:Cinzel;
+
+    color:#cba45f;
+
+    font-size:45px;
+
+    margin-bottom:45px;
+
+}
+
+.region-card{
+
+    background:#17171c;
+
+    border:1px solid #3b2e19;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    transition:.35s;
+
+}
+
+.region-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#cba45f;
+
+    box-shadow:0 0 30px rgba(203,164,95,.2);
+
+}
+
+.region-card h3{
+
+    font-family:Cinzel;
+
+    color:#d7b06c;
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+.region-card p{
+
+    color:#cfc7b5;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    margin-bottom:35px;
+
+}
+
+.region-card a{
+
+    color:#cba45f;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.coming-soon{
+
+    text-align:center;
+
+    margin-top:45px;
+
+    color:#777;
+
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+
+    border-top:1px solid #2c2418;
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#777;
+
 }
