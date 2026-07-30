@@ -1,23 +1,33 @@
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
 
+
 html{
+
     scroll-behavior:smooth;
+
 }
+
 
 body{
 
     background:#0d0d10;
+
     color:#f4ecd8;
 
     font-family:Inter,sans-serif;
 
 }
 
-/* ---------- NAV ---------- */
+
+
+/* ---------- HEADER ---------- */
+
 
 header{
 
@@ -37,9 +47,11 @@ header{
 
 }
 
+
+
 nav{
 
-    max-width:1300px;
+    max-width:1400px;
 
     margin:auto;
 
@@ -53,27 +65,33 @@ nav{
 
 }
 
+
+
 .logo{
 
     font-family:Cinzel,serif;
 
-    font-size:28px;
+    font-size:30px;
 
     color:#cba45f;
 
-    font-weight:bold;
+    font-weight:700;
 
     letter-spacing:3px;
 
 }
 
+
+
 .nav-links{
 
     display:flex;
 
-    gap:35px;
+    gap:40px;
 
 }
+
+
 
 .nav-links a{
 
@@ -85,13 +103,18 @@ nav{
 
 }
 
+
+
 .nav-links a:hover{
 
     color:#cba45f;
 
 }
 
+
+
 /* ---------- HERO ---------- */
+
 
 .hero{
 
@@ -107,9 +130,16 @@ nav{
 
     padding:40px;
 
+
     background:
-    linear-gradient(rgba(10,10,10,.65),rgba(10,10,10,.85)),
+
+    linear-gradient(
+    rgba(10,10,10,.65),
+    rgba(10,10,10,.9)
+    ),
+
     url("https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=1800&auto=format&fit=crop");
+
 
     background-size:cover;
 
@@ -117,41 +147,51 @@ nav{
 
 }
 
+
+
 .hero-content{
 
-    max-width:850px;
+    max-width:900px;
 
 }
+
+
 
 .hero h1{
 
     font-family:Cinzel,serif;
 
-    font-size:90px;
+    font-size:100px;
 
     color:#d7b06c;
 
-    margin-bottom:20px;
+    letter-spacing:5px;
+
+    margin-bottom:25px;
 
 }
 
+
+
 .hero p{
 
-    font-size:22px;
+    font-size:23px;
 
     color:#ddd;
 
     line-height:1.8;
 
-    margin-bottom:40px;
+    margin-bottom:45px;
 
 }
+
+
 
 .button{
 
     display:inline-block;
 
-    padding:18px 40px;
+    padding:18px 45px;
 
     border:2px solid #cba45f;
 
@@ -163,6 +203,8 @@ nav{
 
 }
 
+
+
 .button:hover{
 
     background:#cba45f;
@@ -171,37 +213,109 @@ nav{
 
 }
 
-/* ---------- MAP ---------- */
 
-.map-section{
 
-    padding:120px 40px;
+
+
+/* ---------- WORLD INFO ---------- */
+
+
+.world-info{
 
     max-width:1300px;
 
     margin:auto;
 
+    padding:100px 40px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+
+    gap:30px;
+
 }
 
-.map-section h2{
 
-    font-family:Cinzel;
 
-    font-size:45px;
+.info-card{
 
-    margin-bottom:40px;
+    background:#17171c;
+
+    border:1px solid #3b2e19;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+
+
+.info-card h3{
+
+    font-family:Cinzel,serif;
 
     color:#cba45f;
 
+    margin-bottom:15px;
+
+    font-size:22px;
+
 }
+
+
+
+.info-card p{
+
+    font-size:28px;
+
+    color:#f4ecd8;
+
+}
+
+
+
+/* ---------- MAP ---------- */
+
+
+.map-section{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:80px 40px;
+
+}
+
+
+
+.map-section h2,
+
+.regions h2{
+
+    font-family:Cinzel,serif;
+
+    font-size:50px;
+
+    color:#cba45f;
+
+    margin-bottom:45px;
+
+}
+
+
 
 .map-placeholder{
 
-    height:500px;
+    height:550px;
 
     border:2px dashed #6d5a34;
 
-    border-radius:18px;
+    border-radius:20px;
 
     display:flex;
 
@@ -215,39 +329,46 @@ nav{
 
 }
 
+
+
 .map-placeholder h3{
 
-    font-family:Cinzel;
+    font-family:Cinzel,serif;
 
-    font-size:40px;
+    font-size:42px;
 
     margin-bottom:20px;
 
 }
 
+
+
 /* ---------- REGIONS ---------- */
+
 
 .regions{
 
-    max-width:1300px;
+    max-width:1400px;
 
     margin:auto;
 
-    padding:0 40px 120px;
+    padding:80px 40px 120px;
 
 }
 
-.regions h2{
 
-    font-family:Cinzel;
 
-    color:#cba45f;
+.region-grid{
 
-    font-size:45px;
+    display:grid;
 
-    margin-bottom:45px;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+
+    gap:35px;
 
 }
+
+
 
 .region-card{
 
@@ -255,47 +376,63 @@ nav{
 
     border:1px solid #3b2e19;
 
-    border-radius:18px;
+    border-radius:20px;
 
-    padding:40px;
+    padding:35px;
+
+    min-height:300px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
 
     transition:.35s;
 
 }
 
+
+
 .region-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 
     border-color:#cba45f;
 
-    box-shadow:0 0 30px rgba(203,164,95,.2);
+    box-shadow:0 0 35px rgba(203,164,95,.25);
 
 }
 
+
+
 .region-card h3{
 
-    font-family:Cinzel;
+    font-family:Cinzel,serif;
 
     color:#d7b06c;
 
-    font-size:38px;
+    font-size:36px;
 
     margin-bottom:20px;
 
 }
 
+
+
 .region-card p{
 
     color:#cfc7b5;
 
-    line-height:1.9;
+    font-size:17px;
 
-    font-size:18px;
+    line-height:1.8;
 
-    margin-bottom:35px;
+    margin-bottom:30px;
 
 }
+
+
 
 .region-card a{
 
@@ -307,17 +444,18 @@ nav{
 
 }
 
-.coming-soon{
 
-    text-align:center;
 
-    margin-top:45px;
+.region-card a:hover{
 
-    color:#777;
+    color:#fff;
 
 }
 
+
+
 /* ---------- FOOTER ---------- */
+
 
 footer{
 
@@ -325,8 +463,48 @@ footer{
 
     text-align:center;
 
-    padding:40px;
+    padding:45px;
 
     color:#777;
+
+}
+
+
+
+
+
+/* ---------- MOBILE ---------- */
+
+
+@media(max-width:800px){
+
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+
+    .hero h1{
+
+        font-size:60px;
+
+    }
+
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+
+    .map-placeholder{
+
+        height:350px;
+
+    }
+
 
 }
