@@ -309,21 +309,17 @@ nav{
 
 
 
-.map-placeholder{
+.world-map{
 
-    height:550px;
+    max-width:900px;
 
-    border:2px dashed #6d5a34;
+    margin:auto;
+
+    border:2px solid #3b2e19;
 
     border-radius:20px;
 
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
+    overflow:hidden;
 
     background:#151519;
 
@@ -331,17 +327,29 @@ nav{
 
 
 
-.map-placeholder h3{
+.world-map img{
 
-    font-family:Cinzel,serif;
+    width:100%;
 
-    font-size:42px;
+    height:500px;
 
-    margin-bottom:20px;
+    object-fit:cover;
+
+    display:block;
+
+    cursor:pointer;
+
+    transition:.3s;
 
 }
 
 
+
+.world-map img:hover{
+
+    transform:scale(1.03);
+
+}
 
 /* ---------- REGIONS ---------- */
 
