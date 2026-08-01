@@ -640,7 +640,7 @@ footer{
 
 .region-banner{
 
-    height:70vh;
+    min-height:75vh;
 
     display:flex;
 
@@ -650,84 +650,93 @@ footer{
 
     text-align:center;
 
-    padding:40px;
+    padding:80px 40px;
 
     background:
 
     linear-gradient(
-    rgba(10,10,10,.65),
+    rgba(10,10,10,.55),
     rgba(10,10,10,.9)
     );
 
 }
 
 
+.region-banner div{
+
+    max-width:900px;
+
+}
+
 
 .region-banner h1{
 
     font-family:Cinzel,serif;
 
-    font-size:90px;
+    font-size:100px;
 
     color:#d7b06c;
 
-}
+    margin-bottom:30px;
 
+    letter-spacing:5px;
+
+}
 
 
 .region-banner p{
 
-    max-width:850px;
-
-    font-size:22px;
+    font-size:24px;
 
     line-height:1.8;
+
+    color:#ddd;
 
 }
 
 
 
 
+/* ---------- REGION OVERVIEW ---------- */
+
 
 .region-overview{
 
-    max-width:1300px;
+    max-width:1200px;
 
-    margin:auto;
+    margin:100px auto;
 
-    padding:100px 40px;
+    padding:0 40px;
 
     display:grid;
 
     grid-template-columns:2fr 1fr;
 
-    gap:50px;
+    gap:80px;
+
+    align-items:start;
 
 }
 
 
-
-.region-overview h2,
-
-.kingdom-section h2{
+.region-overview h2{
 
     font-family:Cinzel,serif;
 
+    font-size:50px;
+
     color:#cba45f;
 
-    font-size:45px;
-
-    margin-bottom:30px;
+    margin-bottom:35px;
 
 }
-
 
 
 .region-overview p{
 
-    line-height:1.9;
+    font-size:19px;
 
-    font-size:18px;
+    line-height:2;
 
     color:#d0c8b5;
 
@@ -741,12 +750,13 @@ footer{
 
     border:1px solid #3b2e19;
 
-    border-radius:20px;
+    border-radius:25px;
 
-    padding:35px;
+    padding:40px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
 
 }
-
 
 
 .region-stats h3{
@@ -755,21 +765,40 @@ footer{
 
     color:#d7b06c;
 
-    margin-bottom:25px;
+    font-size:30px;
+
+    margin-bottom:30px;
 
 }
 
 
 
 
+/* ---------- KINGDOMS ---------- */
+
 
 .kingdom-section{
 
-    max-width:1300px;
+    max-width:1200px;
 
-    margin:auto;
+    margin:120px auto;
 
-    padding:50px 40px 120px;
+    padding:0 40px;
+
+}
+
+
+.kingdom-section h2{
+
+    text-align:center;
+
+    font-family:Cinzel,serif;
+
+    color:#cba45f;
+
+    font-size:50px;
+
+    margin-bottom:60px;
 
 }
 
@@ -779,9 +808,9 @@ footer{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(3,1fr);
 
-    gap:35px;
+    gap:40px;
 
 }
 
@@ -793,9 +822,23 @@ footer{
 
     border:1px solid #3b2e19;
 
-    border-radius:20px;
+    border-radius:25px;
 
-    padding:35px;
+    padding:40px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+
+
+.kingdom-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#cba45f;
 
 }
 
@@ -807,9 +850,9 @@ footer{
 
     color:#d7b06c;
 
-    font-size:32px;
+    font-size:35px;
 
-    margin-bottom:20px;
+    margin-bottom:25px;
 
 }
 
@@ -817,8 +860,30 @@ footer{
 
 .kingdom-card p{
 
+    color:#d0c8b5;
+
     line-height:1.8;
 
-    color:#d0c8b5;
+}
+
+
+
+
+@media(max-width:900px){
+
+
+.region-overview{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.kingdom-grid{
+
+    grid-template-columns:1fr;
+
+}
+
 
 }
