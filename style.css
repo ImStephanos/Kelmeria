@@ -656,8 +656,16 @@ footer{
 
     linear-gradient(
     rgba(10,10,10,.55),
-    rgba(10,10,10,.9)
-    );
+    rgba(10,10,10,.85)
+    ),
+
+    url("../images/regions/geroush-banner.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
 
 }
 
