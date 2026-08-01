@@ -516,3 +516,121 @@ footer{
 
 
 }
+
+/* ---------- REGION PAGES ---------- */
+
+
+.region-hero{
+
+    height:70vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+    background:
+
+    linear-gradient(
+    rgba(10,10,10,.65),
+    rgba(10,10,10,.9)
+    );
+
+}
+
+
+
+.region-hero h1{
+
+    font-family:Cinzel,serif;
+
+    font-size:80px;
+
+    color:#cba45f;
+
+}
+
+
+
+.region-hero p{
+
+    font-size:22px;
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+
+
+.kingdoms{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:100px 40px;
+
+}
+
+
+
+.kingdoms h2{
+
+    font-family:Cinzel,serif;
+
+    color:#cba45f;
+
+    font-size:45px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.kingdom-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.kingdom-card{
+
+    background:#17171c;
+
+    border:1px solid #3b2e19;
+
+    border-radius:20px;
+
+    padding:35px;
+
+}
+
+
+
+.kingdom-card h3{
+
+    font-family:Cinzel,serif;
+
+    color:#d7b06c;
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+}
